@@ -20,11 +20,11 @@ html code :-
         </nav>
 
         <div class="mobilemenus" id="mobilemenus">
-            <a href="index.html">Home</a>
+           <a href="index.html">Home</a>
                 <a href="product.html">Product</a>
-                <a href="">About</a>
-                <a href="">Contact</a>
-                <a href="">Account</a>
+                <a href="buy.html">About</a>
+                <a href="cart.html">Contact</a>
+                <a href="account.html">Account</a>
         </div>
 
         
