@@ -1,0 +1,107 @@
+.container{
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: #fee5e4;
+}
+
+.container div{
+    flex-basis: 45%;
+}
+
+.formcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    width: 50%;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+form button{
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+
+form div{
+    margin: 15px 0;
+}
+
+form input{
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+}
+
+form input:focus{
+    outline: 1px solid #bf3e2a;
+}
+
+form h3{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    font-weight: 300;
+}
+
+#registerbtn{
+    border-bottom: 3px solid #bf3e2a;
+    cursor: pointer;
+}
+
+#loginbtn{
+    cursor: pointer;
+}
+
+.parent{
+    position: relative;
+    overflow: hidden;
+}
+
+#login{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: .3s linear;
+}
+
+
+.parent{
+    padding-top: 10px;
+}
+
+@media(max-width:1100px){
+   form{
+    width: 80%;
+   } 
+}
+
+@media(max-width:700px){
+    .container{
+        flex-direction: column-reverse;
+        padding-top: 20px;
+    }
+
+    form{
+        width: 100%;
+    }
+
+    .formcontainer div{
+        flex-basis: 100%;
+    }
+
+
+ }

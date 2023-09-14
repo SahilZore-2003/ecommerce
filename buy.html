@@ -1,0 +1,153 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buying page</title>
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/buy.css">
+    <script src="https://kit.fontawesome.com/2e7d1698d6.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="images/logo.png" alt="">
+        </div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="product.html">Product</a>
+            <a href="buy.html">About</a>
+            <a href="cart.html">Contact</a>
+            <a href="account.html">Account</a>
+            <a href="" class="icons"><img src="images/cart.png" alt=""></a>
+            <i class="fa-solid fa-bars icons" id="menuicon"></i>
+        </div>
+    </nav>
+
+    <div class="mobilemenus" id="mobilemenus">
+        <a href="index.html">Home</a>
+        <a href="product.html">Product</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+        <a href="">Account</a>
+    </div>
+
+    <div class="container">
+        <div class="productimages">
+            <div class="center">
+            <img class="mainimg" id="showimg" src="images/buy-1.jpg" alt="">
+            </div>
+            <div class="images">
+                <img class="active" src="images/gallery-1.jpg" alt="">
+                <img src="images/gallery-2.jpg" alt="">
+                <img src="images/gallery-3.jpg" alt="">
+                <img src="images/gallery-4.jpg" alt="">
+            </div>
+        </div>
+        <div class="content">
+            <p>Home/T-shirt</p>
+            <h1>Red printed T shirt by HRX</h1>
+            <h3>500 ₹</h3>
+            <select name="" id="">
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+            </select> 
+            <div>
+                <input type="number" name="" value="1" min="1" placeholder="Quntity" id="quntity">
+                <a href="cart.html" class="btn">Buy Now</a>
+            </div>
+            <div class="details">
+                <p><b>Product Details</b></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero incidunt amet voluptatem? Sapiente ex esse consequuntur libero quos, minima exercitationem!</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="others">
+        <h3>Related Products</h3>
+
+        <div class="otherproducts">
+            <img src="images/product-4.jpg" alt="">
+            <img src="images/product-5.jpg" alt="">
+            <img src="images/product-9.jpg" alt="">
+            <img src="images/product-8.jpg" alt="">
+        </div>
+    </div>
+
+
+    <footer>
+        <div>
+            <h2>Download our app</h2>
+            <p>download app for android and ios device</p>
+            <div>
+                <img src="images/app-store.png" alt="">
+                <img src="images/play-store.png" alt="">
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <div class="logo">
+                <img src="images/logo-white.png" alt="">
+            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, recusandae.</p>
+        </div>
+        <div style="text-align: center;">
+            <h3>Useful links</h3>
+            <li>
+                <a href="">home</a>
+            </li>
+            <li>
+                <a href="">About</a>
+            </li>
+            <li>
+                <a href="">Contact</a>
+            </li>
+            <li>
+                <a href="">Services</a>
+            </li>
+        </div>
+        <div style="text-align: center;">
+            <h3>Follow Us</h3>
+            <li><a href="https://www.instagram.com/smart_it_world_/">Instagram</a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=7066150130">Whatsapp</a></li>
+            <li><a href="https://github.com/SahilZore-2003">Github</a></li>
+        </div>
+    </footer>
+
+
+    <script>
+        const menuicon = document.querySelector("#menuicon")
+        const mobilemenus = document.querySelector("#mobilemenus")
+        const showimg = document.querySelector("#showimg")
+        const images = document.querySelectorAll(".images img");
+
+        images.forEach((e,index)=>{
+            e.addEventListener("click",()=>{
+                showimg.src = `images/gallery-${index+1}.jpg`;
+                images.forEach((e)=>{
+                    e.classList.remove("active")
+                })
+                e.classList.add("active")
+            })
+
+        })
+        
+        let menuheight = false;
+        
+        menuicon.addEventListener("click", () => {
+            if (menuheight) {
+                mobilemenus.style.height = "0px"
+                menuheight = false;
+            } else {
+        
+                mobilemenus.style.height = "auto"
+                menuheight = true;
+            }
+        })
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+.container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px 20px;
+    padding: 20px 5%;
+}
+
+.container div{
+    flex-basis: 40%;
+}
+
+.images{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.images img{
+    width: 100px;
+    height: 100px;
+}
+
+.otherproducts{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.otherproducts img{
+    width: 20%;
+
+}
+
+#others{
+    padding: 20px 5%;
+}
+
+#others h3{
+    padding-block: 20px;
+}
+
+.productimages .mainimg{
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+}
+
+.productimages div{
+    margin-top: 20px;
+}
+
+.center{
+    text-align: center;
+}
+
+.content{
+    padding-top: 20px;
+}
+
+.content p{
+    color: #333;
+    font-size: 15px;
+}
+
+.content .details{
+    padding-top: 15px;
+}
+
+select{
+    margin-top: 10px;
+    border: 1px solid #f0523a;
+    font-size: 18px;
+    border-radius: 10px;
+    padding-inline: 5px;
+
+}
+
+input{
+    padding: 5px 10px;
+    border: 2px solid #f0523a;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 60px;
+}
+
+input:focus, select:focus{
+    outline: 2px solid #f0523a;
+}
+
+.productimages .images .active{
+    border: 2px solid #f0523a;
+}
+
+@media (max-width:780px){
+    .container div{
+        flex-basis: 90%;
+    }
+
+    .otherproducts img{
+        width: 40%;
+    
+    }
+
+    .otherproducts{
+        padding: 20px 5%;
+    }
+}
+
+@media (max-width:500px){
+    .otherproducts img{
+        width: 100%;
+    
+    }
+
+    .productimages .images img{
+        width: 50px;
+        height: auto;
+        object-fit: cover;
+    }
+    .productimages .images{
+        justify-content: center;
+        gap: 10px;
+    }
+}

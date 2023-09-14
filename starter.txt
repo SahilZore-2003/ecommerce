@@ -1,0 +1,91 @@
+html code :-
+
+
+<script src="https://kit.fontawesome.com/2e7d1698d6.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="product.html">Product</a>
+                <a href="">About</a>
+                <a href="">Contact</a>
+                <a href="">Account</a>
+                <a href="" class="icons"><img src="images/cart.png" alt=""></a>
+                <i class="fa-solid fa-bars icons" id="menuicon"></i>
+            </div>
+        </nav>
+
+        <div class="mobilemenus" id="mobilemenus">
+            <a href="index.html">Home</a>
+                <a href="product.html">Product</a>
+                <a href="">About</a>
+                <a href="">Contact</a>
+                <a href="">Account</a>
+        </div>
+
+        
+    <footer>
+        <div>
+            <h2>Download our app</h2>
+            <p>download app for android and ios device</p>
+            <div>
+                <img src="images/app-store.png" alt="">
+                <img src="images/play-store.png" alt="">
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <div class="logo">
+                <img src="images/logo-white.png" alt="">
+            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, recusandae.</p>
+        </div>
+        <div style="text-align: center;">
+            <h3>Useful links</h3>
+            <li>
+                <a href="">home</a>
+            </li>
+            <li>
+                <a href="">About</a>
+            </li>
+            <li>
+                <a href="">Contact</a>
+            </li>
+            <li>
+                <a href="">Services</a>
+            </li>
+        </div>
+        <div style="text-align: center;">
+            <h3>Follow Us</h3>
+            <li><a href="https://www.instagram.com/smart_it_world_/">Instagram</a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=7066150130">Whatsapp</a></li>
+            <li><a href="https://github.com/SahilZore-2003">Github</a></li>
+        </div>
+    </footer>
+
+
+javascript code :-
+
+
+
+<script>
+const menuicon = document.querySelector("#menuicon")
+const mobilemenus = document.querySelector("#mobilemenus")
+
+let menuheight = false;
+
+menuicon.addEventListener("click", () => {
+    if (menuheight) {
+        mobilemenus.style.height = "0px"
+        menuheight = false;
+    } else {
+
+        mobilemenus.style.height = "auto"
+        menuheight = true;
+    }
+})
+</script>
+

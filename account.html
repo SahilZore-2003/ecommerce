@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/account.css">
+    <script src="https://kit.fontawesome.com/2e7d1698d6.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="images/logo.png" alt="">
+        </div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="product.html">Product</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+            <a href="">Account</a>
+            <a href="" class="icons"><img src="images/cart.png" alt=""></a>
+            <i class="fa-solid fa-bars icons" id="menuicon"></i>
+        </div>
+    </nav>
+
+    <div class="mobilemenus" id="mobilemenus">
+        <a href="index.html">Home</a>
+        <a href="product.html">Product</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+        <a href="">Account</a>
+    </div>
+
+    <div class="container">
+        <div>
+            <img src="images/image1.png" alt="">
+        </div>
+        <div class="formcontainer">
+            <form action="#">
+                <h3><span id="loginbtn">Login</span><span id="registerbtn">Register</span></h3>
+                <div class="parent">
+                    <div id="register">
+                        <div>
+                            <input type="text" placeholder="Username" id="username">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Email" id="email">
+                        </div>
+                        <div>
+                            <input type="password" placeholder="Password" id="password">
+                        </div>
+                        <button>Register</button>
+                    </div>
+                    <div id="login">
+                        <div>
+                            <input type="text" placeholder="Username" id="loginusername">
+                        </div>
+                        <div>
+                            <input type="password" placeholder="Password" id="loginpassword">
+                        </div>
+                        <button>Login</button>
+                    </div>
+                </div>
+                
+                
+            </form>
+        </div>
+    </div>
+
+
+    <footer>
+        <div>
+            <h2>Download our app</h2>
+            <p>download app for android and ios device</p>
+            <div>
+                <img src="images/app-store.png" alt="">
+                <img src="images/play-store.png" alt="">
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <div class="logo">
+                <img src="images/logo-white.png" alt="">
+            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, recusandae.</p>
+        </div>
+        <div style="text-align: center;">
+            <h3>Useful links</h3>
+            <li>
+                <a href="">home</a>
+            </li>
+            <li>
+                <a href="">About</a>
+            </li>
+            <li>
+                <a href="">Contact</a>
+            </li>
+            <li>
+                <a href="">Services</a>
+            </li>
+        </div>
+        <div style="text-align: center;">
+            <h3>Follow Us</h3>
+            <li><a href="https://www.instagram.com/smart_it_world_/">Instagram</a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=7066150130">Whatsapp</a></li>
+            <li><a href="https://github.com/SahilZore-2003">Github</a></li>
+        </div>
+    </footer>
+
+
+
+
+    <script>
+        const menuicon = document.querySelector("#menuicon")
+        const mobilemenus = document.querySelector("#mobilemenus")
+        const loginbtn = document.querySelector("#loginbtn")
+        const registerbtn = document.querySelector("#registerbtn")
+        const login = document.querySelector("#login")
+        const register = document.querySelector("#register")
+
+        let menuheight = false;
+
+        menuicon.addEventListener("click", () => {
+            if (menuheight) {
+                mobilemenus.style.height = "0px"
+                menuheight = false;
+            } else {
+
+                mobilemenus.style.height = "auto"
+                menuheight = true;
+            }
+        })
+
+        loginbtn.addEventListener("click",()=>{
+            login.style.transform = "translateX(0%)";
+            register.style.transform = "translateX(100%)";
+            loginbtn.style.borderBottom = "3px solid #bf3e2a";
+            registerbtn.style.borderBottom = "none";
+        })
+
+        registerbtn.addEventListener("click",()=>{
+            login.style.transform = "translateX(-100%)";
+            register.style.transform = "translateX(0%)";
+            loginbtn.style.borderBottom = "none";
+            registerbtn.style.borderBottom = "3px solid #bf3e2a";
+        })
+
+
+    </script>
+
+
+
+</body>
+
+</html>

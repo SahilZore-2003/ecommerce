@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart page</title>
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <script src="https://kit.fontawesome.com/2e7d1698d6.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="images/logo.png" alt="">
+        </div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="product.html">Product</a>
+            <a href="buy.html">About</a>
+            <a href="cart.html">Contact</a>
+            <a href="account.html">Account</a>
+            <a href="" class="icons"><img src="images/cart.png" alt=""></a>
+            <i class="fa-solid fa-bars icons" id="menuicon"></i>
+        </div>
+    </nav>
+
+    <div class="mobilemenus" id="mobilemenus">
+        <a href="index.html">Home</a>
+        <a href="product.html">Product</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+        <a href="">Account</a>
+    </div>
+
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quntity</th>
+            <th>Subtotal</th>
+        </tr>
+        <tr>
+            <td class="flex">
+                <img src="images/product-1.jpg" alt="">
+                <div>
+                    <h4>Red T shirt</h4>
+                    <p>500 ₹</p>
+                </div>
+                <button>remove</button>
+            </td>
+            <td>3</td>
+            <td>1500</td>
+        </tr>
+        <tr>
+            <td class="flex">
+                <img src="images/product-10.jpg" alt="">
+                <div>
+                    <h4>Nike Shoes</h4>
+                    <p>2800 ₹</p>
+                </div>
+                <button>remove</button>
+            </td>
+            <td>3</td>
+            <td>8400</td>
+        </tr>
+        <tr>
+            <td class="flex">
+                <img src="images/product-8.jpg" alt="">
+                <div>
+                    <h4>Titan sport watch</h4>
+                    <p>1800 ₹</p>
+                </div>
+                <button>remove</button>
+            </td>
+            <td>3</td>
+            <td>4500</td>
+        </tr>
+        <tr id="bill">
+            <td>
+
+            </td>
+            <td>
+                total
+            </td>
+            <td>15,500</td>
+        </tr>
+        <tr style="border: none;">
+            <td style="border: none;"></td>
+            <td style="border: none;"></td>
+            <td style="border: none;"><button id="buybtn">Buy Now</button></td>
+        </tr>
+
+
+
+
+    </table>
+
+
+
+
+
+    <footer>
+        <div>
+            <h2>Download our app</h2>
+            <p>download app for android and ios device</p>
+            <div>
+                <img src="images/app-store.png" alt="">
+                <img src="images/play-store.png" alt="">
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <div class="logo">
+                <img src="images/logo-white.png" alt="">
+            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, recusandae.</p>
+        </div>
+        <div style="text-align: center;">
+            <h3>Useful links</h3>
+            <li>
+                <a href="">home</a>
+            </li>
+            <li>
+                <a href="">About</a>
+            </li>
+            <li>
+                <a href="">Contact</a>
+            </li>
+            <li>
+                <a href="">Services</a>
+            </li>
+        </div>
+        <div style="text-align: center;">
+            <h3>Follow Us</h3>
+            <li><a href="https://www.instagram.com/smart_it_world_/">Instagram</a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=7066150130">Whatsapp</a></li>
+            <li><a href="https://github.com/SahilZore-2003">Github</a></li>
+        </div>
+    </footer>
+
+
+
+    <script>
+        const menuicon = document.querySelector("#menuicon")
+        const mobilemenus = document.querySelector("#mobilemenus")
+
+        let menuheight = false;
+
+        menuicon.addEventListener("click", () => {
+            if (menuheight) {
+                mobilemenus.style.height = "0px"
+                menuheight = false;
+            } else {
+
+                mobilemenus.style.height = "auto"
+                menuheight = true;
+            }
+        })
+    </script>
+</body>
+
+</html>
